@@ -1,0 +1,16 @@
+version: '3'
+services:
+  haproxy:
+    build:
+      context: .
+      dockerfile: haproxy.Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    networks:
+      - haproxy_network
+
+networks:
+  haproxy_network:
+    driver: bridge
