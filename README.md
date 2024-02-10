@@ -30,7 +30,7 @@ This repository provides a simple example of setting up HAProxy for HTTP redirec
 
 ### Access the Redirection:
 
-Open a web browser and navigate to http://localhost:8080. HAProxy will redirect the traffic to one of the web containers in a round-robin fashion.   
+Open a web browser and navigate to http://localhost:8080. HAProxy will redirect the traffic to the specified URL configured in `haproxy.cfg` file
 
 ### Additional Considerations:
 In a production environment, consider using SSL/TLS for secure connections.
